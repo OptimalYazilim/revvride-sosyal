@@ -11,6 +11,7 @@ metinler durur; uygulamanın kodu ve şifreler bu depoda yoktur.
 | **Yayıncı** (`.github/workflows/yayinla.yml`) | GitHub, 15 dakikada bir | Saati gelen gönderiyi ve hikâyeyi Instagram'ın resmî API'siyle paylaşır, erişim anahtarını yeniler, günde bir istatistik alır |
 | **Çizer** (`.github/workflows/ciz.yml`) | GitHub, yeni taslak gelince | Taslakların görsellerini çizer, yazı taşarsa durdurur, takvime ekler |
 | **İçerik ajansı** (Claude bulut rutini) | Anthropic, haftada bir | Önümüzdeki 2 haftanın gönderilerini [AJANS.md](AJANS.md)'deki kurallarla yazar, ayda bir rapor çıkarır |
+| **Yorum cevapları** (Claude bulut rutini) | Anthropic, 2 saatte bir (08:00–24:00) | Yayıncının topladığı yeni yorumlara [YORUM.md](YORUM.md)'deki kurallarla cevap yazar; yayıncı gönderir |
 
 Takvim: [icerik/takvim.json](icerik/takvim.json) · Paylaşılanlar: [durum/yayinlananlar.json](durum/yayinlananlar.json) ·
 İstatistik: [durum/istatistik.json](durum/istatistik.json) · Aylık raporlar: [raporlar/](raporlar/)
@@ -42,8 +43,8 @@ kendisi yeniler, bir daha yapıştırman gerekmez.
 
 ## Otomatik olmayanlar
 
-- **Öne çıkanlar:** Instagram'ın API'si öne çıkan oluşturmaya izin vermiyor. İstersen hikâyeleri telefondan
-  öne çıkanlara eklersin.
-- **Yorum ve mesaj cevapları:** şimdilik kapalı.
+- **Öne çıkanlar:** Instagram'ın API'si öne çıkan oluşturmaya izin vermiyor; ilk 6 öne çıkan instagram.com'dan
+  elle oluşturuldu. Yenisi gerekirse aynı yoldan eklenir.
+- **Mesaj (DM) cevapları:** kapalı. Yorum cevapları açık; spam, hakaret ve siyasete cevap verilmez.
 - **Uygulama mağazaya çıkınca:** `icerik/ayarlar.json`'daki yazı "App Store ve Google Play'de" yapılır,
   biyografiye indirme bağlantısı eklenir.

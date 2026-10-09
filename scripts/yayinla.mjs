@@ -13,6 +13,8 @@
 import { createCipheriv, createDecipheriv, createHash, randomBytes } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 
+import { metinDenetle } from './kurallar.mjs';
+
 const API = process.env.IG_API ?? 'https://graph.instagram.com'; // testte sahte sunucu verilebilir
 const REPO = process.env.GITHUB_REPOSITORY;
 const SHA = process.env.GITHUB_SHA;
@@ -172,6 +174,86 @@ async function istatistik(ig) {
   console.log(`İstatistik güncellendi: ${gonderiler.length} gönderi, ${hesap.followers_count ?? '?'} takipçi.`);
 }
 
+// ------------------------------------------------------------------ yorumlar
+/*
+ * Yeni yorumlar durum/yorumlar.json kuyruğuna yazılır (kullanıcı adı saklanmaz). Yorum rutini (Claude)
+ * cevapları icerik/yanitlar.json'a yazar; burada denetlenip Instagram'a gönderilir. Kurallar: YORUM.md.
+ */
+const YORUM_GUN = 14; // bu kadar günden eski gönderilerin yorumlarına bakılmaz
+const TUR_BASINA_YANIT = 20;
+
+async function yorumlar(ig, kullanici) {
+  const kayit = okuJson('durum/yorumlar.json', { izin: null, kuyruk: {} });
+  const yanitlar = okuJson('icerik/yanitlar.json', { yanitlar: {} }).yanitlar ?? {};
+
+  // 1) Rutinin yazdığı cevapları gönder.
+  let gonderilen = 0;
+  for (const [id, y] of Object.entries(kayit.kuyruk)) {
+    if (y.durum !== 'bekliyor' || !(id in yanitlar) || gonderilen >= TUR_BASINA_YANIT) continue;
+    const cevap = yanitlar[id]?.yanit ?? null;
+    if (cevap === null) {
+      y.durum = 'atlandi';
+      y.neden = yanitlar[id]?.neden ?? null;
+      continue;
+    }
+    const sorun = [
+      ...metinDenetle({ metin: cevap, gonderiMi: false }),
+      ...(cevap.length > 300 ? ['300 karakterden uzun'] : []),
+      ...(/#|https?:\/\/|www\./i.test(cevap) ? ['etiket ya da bağlantı içeriyor'] : []),
+    ];
+    if (sorun.length) {
+      y.durum = 'hata';
+      y.neden = `denetim: ${sorun.join(', ')}`;
+      continue;
+    }
+    try {
+      const r = await api('POST', `${id}/replies`, { message: cevap });
+      Object.assign(y, { durum: 'yanitlandi', yanit: cevap, yanit_id: r.id, yanitlanma: new Date().toISOString() });
+      gonderilen++;
+    } catch (e) {
+      y.durum = 'hata';
+      y.neden = e.message;
+    }
+  }
+  if (gonderilen) console.log(`${gonderilen} yoruma cevap verildi.`);
+
+  // 2) Yeni yorumları topla (30 dakikada bir yeter).
+  if (!kayit.son_kontrol || SIMDI - new Date(kayit.son_kontrol) >= 29 * 60e3) {
+    const sinir = SIMDI.getTime() - YORUM_GUN * 864e5;
+    const medya = (await api('GET', `${ig}/media`, { fields: 'id,caption,timestamp,comments_count', limit: '25' })).data ?? [];
+    let yeni = 0;
+    try {
+      for (const m of medya) {
+        if (!m.comments_count || new Date(m.timestamp).getTime() < sinir) continue;
+        const c = await api('GET', `${m.id}/comments`, { fields: 'id,text,timestamp,username,replies{username}', limit: '50' });
+        for (const yorum of c.data ?? []) {
+          if (kayit.kuyruk[yorum.id] || yorum.username === kullanici) continue;
+          if ((yorum.replies?.data ?? []).some((r) => r.username === kullanici)) continue;
+          kayit.kuyruk[yorum.id] = {
+            durum: 'bekliyor',
+            media_id: m.id,
+            gonderi: (m.caption ?? '').split('\n')[0].slice(0, 100),
+            metin: (yorum.text ?? '').slice(0, 500),
+            zaman: yorum.timestamp,
+          };
+          yeni++;
+        }
+      }
+      kayit.izin = true;
+    } catch (e) {
+      if (/permission|izin|\(#10\)|\(#200\)/i.test(e.message) || e.kod === 10 || e.kod === 200) {
+        if (kayit.izin !== false) console.log(`Yorumları okuma izni yok (instagram_business_manage_comments): ${e.message}`);
+        kayit.izin = false;
+      } else {
+        throw e;
+      }
+    }
+    kayit.son_kontrol = SIMDI.toISOString();
+    if (yeni) console.log(`${yeni} yeni yorum kuyruğa alındı.`);
+  }
+  yazJson('durum/yorumlar.json', kayit);
+}
+
 // ------------------------------------------------------------------ ana akış
 const ben = await api('GET', 'me', { fields: 'user_id,username,account_type' });
 if (!['BUSINESS', 'MEDIA_CREATOR'].includes(ben.account_type)) {
@@ -228,6 +310,7 @@ for (const oge of sirali) {
 }
 
 await istatistik(IG).catch((e) => console.log(`İstatistik alınamadı: ${e.message}`));
+await yorumlar(IG, ben.username).catch((e) => console.log(`Yorumlar işlenemedi: ${e.message}`));
 
 if (hatalar.length) {
   console.log(`\n${hatalar.length} öğe paylaşılamadı; sonraki çalışmada yeniden denenecek:\n- ${hatalar.join('\n- ')}`);
