@@ -1,12 +1,24 @@
 {
   "izin": true,
-  "yanitlanan": {},
-  "konusma": {},
-  "sayac": {},
+  "yanitlanan": {
+    "c50a5171bd0e24c8": "2026-10-09T15:02:26.102Z",
+    "bc4976dfc9de0b3b": "2026-10-09T15:02:26.102Z"
+  },
+  "konusma": {
+    "daf1516a5a8e680c": {
+      "zaman": "2026-10-09T15:02:26.102Z",
+      "konu": "cikis",
+      "gun": "2026-10-09",
+      "sayi": 1
+    }
+  },
+  "sayac": {
+    "cikis": 1
+  },
   "insan_bekleyen": 0,
-  "son_kontrol": "2026-10-09T14:53:06.351Z",
+  "son_kontrol": "2026-10-09T15:02:26.102Z",
   "gorunen": {
-    "konusma": 0,
-    "son_24_saat": 0
+    "konusma": 2,
+    "son_24_saat": 2
   }
 }
