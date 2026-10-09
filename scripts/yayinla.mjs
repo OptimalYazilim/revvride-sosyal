@@ -285,6 +285,7 @@ async function mesajlar(ig, ben) {
   let gonderilen = 0;
   const pencerede = konusmalar.filter((k) => new Date(k.updated_time).getTime() >= pencere).length;
   console.log(`Mesajlar: ${konusmalar.length} konuşma görünüyor, ${pencerede} tanesi son 24 saatte.`);
+  kayit.gorunen = { konusma: konusmalar.length, son_24_saat: pencerede };
   for (const k of konusmalar) {
     if (new Date(k.updated_time).getTime() < pencere) continue;
     const mesajlar = (await api('GET', k.id, { fields: 'messages.limit(10){id,created_time,from,message}' })).messages?.data ?? [];
