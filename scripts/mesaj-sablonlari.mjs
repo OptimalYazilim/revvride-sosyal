@@ -54,6 +54,11 @@ export const KONULAR = [
     cevap: 'Çok yakında App Store ve Google Play\'de olacağız! 🏍️ Çıktığı gün buradan ve hikâyelerimizden duyuracağız; takipte kal.',
   },
   {
+    ad: 'nasil-kullanilir',
+    kelime: /nasil kullan|nasil calis|kullanabilir|ne ise yar|nedir|ne yapiyor|nasil bir uygulama|ozellik/,
+    cevap: 'RevvRide çok yakında App Store ve Google Play\'de! 🏍️ Çıkınca uygulamayı indirip telefon numaranla giriş yapman yeterli. Kask intercom\'unu telefona Bluetooth ile bağla, "Sürüşe başla"ya dokun: önündeki tehlikeleri kaskından duyarsın, sürüşün kaydedilir. Adım adım anlatım profilimizdeki "Nasıl?" öne çıkanında.',
+  },
+  {
     ad: 'platform',
     kelime: /android|ios|iphone|samsung|huawei|telefonum|uyumlu mu/,
     cevap: 'RevvRide iOS ve Android için geliyor. Çok yakında App Store ve Google Play\'de! 📱',
