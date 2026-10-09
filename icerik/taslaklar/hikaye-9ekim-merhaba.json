@@ -1,0 +1,16 @@
+{
+  "id": "hikaye-9ekim-merhaba",
+  "zaman": "2026-10-09T16:53:00+03:00",
+  "tur": "hikaye",
+  "baslik": "Hikâye: Merhaba, biz RevvRide",
+  "kareler": [
+    {
+      "sablon": "hikaye",
+      "zemin": "turuncu",
+      "etiket": "YENİ HESAP",
+      "baslik": "Merhaba, biz RevvRide!",
+      "metin": "Motosiklet sürücüleri için kaskta tehlike ikazı, virajlı rotalar, kulüp ve konvoy. Yakında App Store ve Google Play’de; takipte kal.",
+      "ikon": "motorcycle"
+    }
+  ]
+}
