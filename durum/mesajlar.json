@@ -16,9 +16,25 @@
     "cikis": 1
   },
   "insan_bekleyen": 0,
-  "son_kontrol": "2026-10-09T15:09:40.918Z",
+  "son_kontrol": "2026-10-09T15:13:24.295Z",
   "gorunen": {
     "konusma": 2,
     "son_24_saat": 2
-  }
+  },
+  "son_teshis": [
+    {
+      "mesaj": 2,
+      "metinli": 2,
+      "kimden_var": 2,
+      "bizden": 1,
+      "yeni": 0
+    },
+    {
+      "mesaj": 1,
+      "metinli": 0,
+      "kimden_var": 1,
+      "bizden": 0,
+      "yeni": 0
+    }
+  ]
 }
