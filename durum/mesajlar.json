@@ -1,19 +1,28 @@
 {
   "izin": true,
-  "yanitlanan": {},
+  "yanitlanan": {
+    "bc4976dfc9de0b3b": "2026-10-09T15:20:57.900Z"
+  },
   "konusma": {
     "daf1516a5a8e680c": {
       "zaman": "2026-10-09T15:02:26.102Z",
       "konu": "cikis",
       "gun": "2026-10-09",
       "sayi": 1
+    },
+    "7ead381f29f155a3": {
+      "zaman": "2026-10-09T15:20:57.900Z",
+      "konu": "hikaye-yaniti",
+      "gun": "2026-10-09",
+      "sayi": 1
     }
   },
   "sayac": {
-    "cikis": 1
+    "cikis": 1,
+    "hikaye-yaniti": 1
   },
-  "insan_bekleyen": 0,
-  "son_kontrol": "2026-10-09T15:18:40.068Z",
+  "insan_bekleyen": 1,
+  "son_kontrol": "2026-10-09T15:20:57.900Z",
   "gorunen": {
     "konusma": 2,
     "son_24_saat": 2
@@ -43,7 +52,13 @@
         "from",
         "id",
         "message"
-      ]
+      ],
+      "ayrinti": {
+        "metin_geldi": false,
+        "hikaye": true,
+        "desteklenmiyor": false,
+        "ek": false
+      }
     }
   ]
 }
