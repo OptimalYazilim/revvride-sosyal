@@ -1,0 +1,46 @@
+# Zamanı gelen Instagram gönderilerini paylaşır. GitHub'ın sunucularında 15 dakikada bir çalışır.
+# Durdurmak için: Actions > Yayınla > ••• > Disable workflow.
+name: Yayınla
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yayinla
+  cancel-in-progress: false
+
+jobs:
+  yayinla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Takvimi denetle
+        run: node scripts/dogrula.mjs
+
+      - name: Zamanı gelenleri paylaş
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: node scripts/yayinla.mjs
+
+      - name: Durumu kaydet
+        if: always()
+        run: |
+          git config user.name "revvride-yayinci"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add durum
+          if ! git diff --cached --quiet; then
+            git commit -m "Yayın durumu"
+            git pull --rebase --autostash
+            git push
+          fi

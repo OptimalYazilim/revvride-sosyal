@@ -1,0 +1,56 @@
+# Taslaklar değişince görselleri çizer ve yayın takvimine ekler (GitHub'ın sunucusunda, Chrome ile).
+# Sonuç durum/ciz-raporu.json'a yazılır; hata olsa da rapor kaydedilir ki içerik ajansı düzeltebilsin.
+name: Çiz
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'icerik/taslaklar/**'
+      - 'icerik/ayarlar.json'
+      - 'sablon/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ciz
+  cancel-in-progress: false
+
+jobs:
+  ciz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Taslakları çiz
+        id: ciz
+        continue-on-error: true
+        run: node sablon/ciz.mjs
+
+      - name: Takvimi denetle
+        run: node scripts/dogrula.mjs
+
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "revvride-cizer"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add gorseller icerik/takvim.json durum
+          if ! git diff --cached --quiet; then
+            git commit -m "Görseller çizildi"
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - name: Sonuç
+        if: steps.ciz.outcome == 'failure'
+        run: |
+          echo "Bazı taslaklar çizilemedi; ayrıntı durum/ciz-raporu.json içinde."
+          exit 1

@@ -1,0 +1,11 @@
+{
+  "id": "12kasim-yagmurda-surer-misin",
+  "zaman": "2026-11-12T20:00:00+03:00",
+  "tur": "gonderi",
+  "baslik": "Yağmurda sürer misin?",
+  "metin": "Gökyüzü karardı, kask elinde. Ne yaparsın? 🌧️🏍️\n\n“Sürerim” mi, “Beklerim” mi? Yorumlara yaz, bakalım motorcular ne diyor 👇\n\n#RevvRide #motosiklet #motorcu #motorcular #yağmur",
+  "alt": "Koyu zeminde virajlı yol çizgisi ve \"Yağmur bastırdı. Sürer misin, beklersin mi?\" sorusu.",
+  "kareler": [
+    { "sablon": "soru", "baslik": "Yağmur bastırdı. Sürer misin, beklersin mi?", "metin": "“Sürerim” ya da “Beklerim” diye yorumlara yaz.", "rozet": "Yorumlara yaz ↓" }
+  ]
+}

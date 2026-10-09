@@ -1,0 +1,17 @@
+{
+  "id": "10kasim-anma",
+  "zaman": "2026-11-10T09:05:00+03:00",
+  "tur": "gonderi",
+  "baslik": "10 Kasım",
+  "metin": "Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk'ü vefatının 88. yılında saygı, minnet ve özlemle anıyoruz. 🇹🇷\n\n#10Kasım #Atatürk",
+  "alt": "Koyu zeminde beyaz yazıyla \"10 Kasım\" ve \"Saygı, minnet ve özlemle anıyoruz.\"",
+  "kareler": [
+    {
+      "sablon": "ozel-gun",
+      "renk": "koyu",
+      "buyuk": "10 Kasım",
+      "baslik": "Saygı, minnet ve özlemle anıyoruz.",
+      "alt": "1881 · 1938"
+    }
+  ]
+}

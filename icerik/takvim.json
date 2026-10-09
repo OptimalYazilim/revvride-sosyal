@@ -1,0 +1,394 @@
+{
+  "aciklama": "Yayın takvimi. Saatler İstanbul saati (+03:00). Kurallar: AJANS.md",
+  "ogeler": [
+    {
+      "id": "acilis-1-yolda-yalniz-degilsin",
+      "zaman": "2026-10-09T00:00:00+03:00",
+      "tur": "gonderi",
+      "baslik": "SOS: Yolda yalnız değilsin",
+      "gorseller": [
+        "gorseller/acilis-1-yolda-yalniz-degilsin/1.jpg"
+      ],
+      "metin": "Yolda yalnız değilsin. 🛡️\n\nSOS'a basılı tut: acil kişilerine SMS gider; numarasını onaylayan kişiler bulunduğun yerin bağlantısını da alır. Yardım ağına katılan yakındaki sürücülere haber verilir.\n\nSen de yardım ağına katılabilirsin; yakınında biri SOS basarsa haber alırsın, gidip gitmemek senin kararın.\n\nÖnemli: RevvRide 112'nin yerine geçmez. Hayati tehlikede önce 112'yi ara.\n\n#RevvRide #motosiklet #motorcu #güvenlisürüş #yardım",
+      "alt": "Koyu zeminde kırmızı \"SOS – Basılı tut\" düğmesi ve \"Yolda yalnız değilsin.\" başlığı.",
+      "gec_kalsa_da": true
+    },
+    {
+      "id": "acilis-2-kulup-konvoy",
+      "zaman": "2026-10-09T00:01:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Kulüp ve konvoy",
+      "gorseller": [
+        "gorseller/acilis-2-kulup-konvoy/1.jpg"
+      ],
+      "metin": "Pazar kahvaltısı kulüple daha güzel. ☕\n\nRevvRide'da kulübün için etkinlik aç: buluşma yeri ve saati, kontenjan, bekleme listesi. Buluşmadan önce herkese hatırlatma gider.\n\nEtkinlik günü konvoyu başlat; \"Katılıyorum\" diyenler kod girmeden katılır. Konvoyda geride kalan olursa herkes kaskından duyar.\n\nKulübünü etiketle, birlikte sürün 👇\n\n#RevvRide #motosikletkulübü #konvoy #motorcu #motosiklet",
+      "alt": "Turuncu zeminde \"Kulübünle buluş, konvoyla sür.\" başlığı; etkinlik sayfası ve dört madde.",
+      "gec_kalsa_da": true
+    },
+    {
+      "id": "acilis-3-sen-hangisisin",
+      "zaman": "2026-10-09T00:02:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Sen hangisisin?",
+      "gorseller": [
+        "gorseller/acilis-3-sen-hangisisin/1.jpg"
+      ],
+      "metin": "Chopper mı, sport mu, adventure mı? 🤔 Numaranı yorumlara yaz 👇\n\n01 Chopper & Cruiser\n02 Sport & Naked\n03 Touring\n04 Adventure\n05 Klasik\n06 Scooter\n\nRevvRide'da tarzını seçtiğinde sana uygun rotalar ve sürücüler öne çıkar. Bir rotanın hangi tarza uygun olduğunu o tarzdaki sürücülerin puanları belirler.\n\n#RevvRide #motosiklet #chopper #adventure #touring",
+      "alt": "Turuncu zeminde \"Sen hangisisin?\" başlığı ve altı sürüş tarzı kartı.",
+      "gec_kalsa_da": true
+    },
+    {
+      "id": "acilis-4-virajli-rotalar",
+      "zaman": "2026-10-09T00:03:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Virajlı rotalar",
+      "gorseller": [
+        "gorseller/acilis-4-virajli-rotalar/1.jpg"
+      ],
+      "metin": "Hafta sonu nereye? 🛣️\n\nSürücülerin paylaştığı yollar viraj sayısı, kıvrımlılık ve puanlarıyla RevvRide'da. Tarzına uygun olanlar önde.\n\nKendi sürüşünü kaydet, rotaya çevir, istersen herkesle paylaş. Rotayı sürerken keskin virajlar ve firketeler yaklaşınca kaskından haber alırsın.\n\nSenin favori virajlı yolun hangisi? Yorumlara yaz 👇\n\n#RevvRide #virajlıyollar #motosiklet #motorcu #rota",
+      "alt": "Açık zeminde \"Virajı sevenlerin rotaları.\" başlığı, \"153 viraj\" etiketi ve rota akışını gösteren telefon.",
+      "gec_kalsa_da": true
+    },
+    {
+      "id": "acilis-5-tehlike-ikazi",
+      "zaman": "2026-10-09T00:04:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Tehlike ikazı",
+      "gorseller": [
+        "gorseller/acilis-5-tehlike-ikazi/1.jpg"
+      ],
+      "metin": "Gözün yolda, kulağın kaskta. 🎧\n\n\"350 metre ileride çukur var, dikkat.\"\nÇukur, mıcır, yağ, kaza, yol çalışması… RevvRide yaklaşırken söyler; ikaz telefonuna Bluetooth ile bağlı intercom'undan okunur, müzik konuşma süresince kısılır.\n\nGeçerken \"Hâlâ orada\" ya da \"Artık yok\" de, bilgi sürücülerle güncel kalsın.\n\nİkazlar yardımcıdır; yolu her zaman kendi gözünle oku.\n\n#RevvRide #motosiklet #intercom #kask #güvenlisürüş",
+      "alt": "Turuncu zeminde \"Tehlikeyi kaskından duy.\" başlığı; sürüş ekranında \"350 metre ileride çukur var\" ikazı.",
+      "gec_kalsa_da": true
+    },
+    {
+      "id": "acilis-6-tanitim",
+      "zaman": "2026-10-09T00:05:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Tanıtım",
+      "gorseller": [
+        "gorseller/acilis-6-tanitim/1.jpg"
+      ],
+      "metin": "Yola birlikte çıkalım. 🏍️\n\nRevvRide, motosiklet sürücüleri için:\n• Önündeki tehlikeyi kaskından duy\n• Sürücülerin paylaştığı virajlı rotaları keşfet\n• Kulübünle buluş, konvoyla sür\n• Acil durumda SOS ile yardım çağır (SOS 112'nin yerine geçmez; hayati tehlikede önce 112'yi ara)\n\nYakında App Store ve Google Play'de. Haberdar olmak için takip et.\n\n#RevvRide #motosiklet #motorcu #motorcular #motosikletsürücüsü",
+      "alt": "Koyu zeminde RevvRide logosu, \"Yola birlikte çıkalım.\" başlığı ve uygulamanın ana ekranını gösteren telefon.",
+      "gec_kalsa_da": true
+    },
+    {
+      "id": "hikaye-01-12ekim-islak-yaprak",
+      "zaman": "2026-10-12T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Islak yaprak buz gibidir",
+      "gorseller": [
+        "gorseller/hikaye-01-12ekim-islak-yaprak/1.jpg"
+      ]
+    },
+    {
+      "id": "01-13ekim-sonbahar-kurallari",
+      "zaman": "2026-10-13T20:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Sonbaharda motor: 6 kural",
+      "gorseller": [
+        "gorseller/01-13ekim-sonbahar-kurallari/1.jpg",
+        "gorseller/01-13ekim-sonbahar-kurallari/2.jpg",
+        "gorseller/01-13ekim-sonbahar-kurallari/3.jpg",
+        "gorseller/01-13ekim-sonbahar-kurallari/4.jpg",
+        "gorseller/01-13ekim-sonbahar-kurallari/5.jpg",
+        "gorseller/01-13ekim-sonbahar-kurallari/6.jpg",
+        "gorseller/01-13ekim-sonbahar-kurallari/7.jpg",
+        "gorseller/01-13ekim-sonbahar-kurallari/8.jpg"
+      ],
+      "metin": "Sonbaharda yol aynı, tutuş aynı değil. 🍂\n\nIslak yaprak, soğuk lastik, sabah sisi, kısalan gün… Sürüşten önce bu 6 kurala bir göz at, kaydet, motorcu arkadaşına gönder.\n\nSen bu mevsimde en çok neye dikkat ediyorsun? Yorumlara yaz 👇\n\nRevvRide'da sürücüler buzlanma, sis, su birikintisi gibi tehlikeleri bildirir; yaklaşırken kaskından duyarsın. Yakında App Store ve Google Play'de.\n\n#RevvRide #motosiklet #motorcu #güvenlisürüş #sonbahar",
+      "alt": "Sonbaharda motosiklet sürüşü için 6 kural: ıslak yaprak, soğuk lastik, sis, görünürlük, katmanlı giyinme, kaygan çizgi ve rögar kapakları."
+    },
+    {
+      "id": "02-15ekim-hey-revvride",
+      "zaman": "2026-10-15T20:00:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Hey RevvRide: sesli asistan",
+      "gorseller": [
+        "gorseller/02-15ekim-hey-revvride/1.jpg"
+      ],
+      "metin": "Elin gidonda, sesin yeter. 🎙️\n\n\"Hey RevvRide, çukur var.\" \"Hızım kaç?\" \"Sıradaki viraj ne zaman?\" \"Yardım çağır.\"\n\nSesli asistanı ayarlardan açtığında sürüşte kaskının mikrofonuyla konuşursun. Mikrofon yalnızca sürüşte ve bu ayar açıkken dinler; ses kaydedilmez.\n\nYakında App Store ve Google Play'de.\n\n#RevvRide #intercom #motosiklet #kask #motorcu",
+      "alt": "Koyu zeminde \"Hey RevvRide.\" başlığı ve dört sesli komut balonu: çukur var, hızım kaç, sıradaki viraj ne zaman, yardım çağır."
+    },
+    {
+      "id": "hikaye-02-16ekim-yola-cikmadan",
+      "zaman": "2026-10-16T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Yola çıkmadan 5 kontrol",
+      "gorseller": [
+        "gorseller/hikaye-02-16ekim-yola-cikmadan/1.jpg"
+      ]
+    },
+    {
+      "id": "03-17ekim-kaskina-bagla",
+      "zaman": "2026-10-17T10:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Kaskına bağla: 3 adım",
+      "gorseller": [
+        "gorseller/03-17ekim-kaskina-bagla/1.jpg",
+        "gorseller/03-17ekim-kaskina-bagla/2.jpg",
+        "gorseller/03-17ekim-kaskina-bagla/3.jpg",
+        "gorseller/03-17ekim-kaskina-bagla/4.jpg",
+        "gorseller/03-17ekim-kaskina-bagla/5.jpg",
+        "gorseller/03-17ekim-kaskina-bagla/6.jpg"
+      ],
+      "metin": "Kask intercom'un var mı? O zaman hazırsın. 🎧\n\nRevvRide için ayrı bir cihaz gerekmez: telefona Bluetooth ile bağlanan her intercom'la çalışır. 3 adımda kur, sesi dene, yola çık.\n\nHangi intercom'u kullanıyorsun? Yorumlara yaz 👇\n\n#RevvRide #intercom #kask #motosiklet #motorcu",
+      "alt": "Kask intercomunu telefona bağlamanın 3 adımı: eşleştirme modu, Bluetooth ayarları, sesi deneme."
+    },
+    {
+      "id": "hikaye-03-19ekim-soguk-lastik",
+      "zaman": "2026-10-19T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Soğuk lastik az tutar",
+      "gorseller": [
+        "gorseller/hikaye-03-19ekim-soguk-lastik/1.jpg"
+      ]
+    },
+    {
+      "id": "04-20ekim-motor-dostu-mekanlar",
+      "zaman": "2026-10-20T20:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Motor dostu mekânlar",
+      "gorseller": [
+        "gorseller/04-20ekim-motor-dostu-mekanlar/1.jpg",
+        "gorseller/04-20ekim-motor-dostu-mekanlar/2.jpg",
+        "gorseller/04-20ekim-motor-dostu-mekanlar/3.jpg",
+        "gorseller/04-20ekim-motor-dostu-mekanlar/4.jpg",
+        "gorseller/04-20ekim-motor-dostu-mekanlar/5.jpg"
+      ],
+      "metin": "Pazar kahvaltısı için motorcuyu seven bir yer mi arıyorsun? ☕\n\nRevvRide'da sürücülerin önerdiği kafe, lokanta, benzinlik ve konaklama yerleri var: motorcuya indirim, güvenli park, kask emaneti, buluşma noktası gibi bilgilerle. Rotanın üstündeki duraklar da haritada.\n\nSenin favori motorcu durağın neresi? İl ve mekân adıyla yorumlara yaz 👇\n\n#RevvRide #motorcu #motosiklet #motorcudostu #haftasonu",
+      "alt": "Motor dostu mekânlar: kafe, lokanta, benzinlik ve konaklama yerleri; motorcuya indirim, güvenli park, kask emaneti gibi etiketler."
+    },
+    {
+      "id": "05-22ekim-virajlar",
+      "zaman": "2026-10-22T20:00:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Virajı önceden bil",
+      "gorseller": [
+        "gorseller/05-22ekim-virajlar/1.jpg"
+      ],
+      "metin": "\"Dikkat, 200 metre sonra sağa firkete.\" 🛣️\n\nRevvRide'da sürücülerin paylaştığı virajlı rotaları viraj sayısı, kıvrımlılık ve puanlarıyla keşfedersin. Rotayı sürerken keskin virajlar ve firketeler yaklaşınca kaskından haber alırsın.\n\nSenin favori virajlı yolun hangisi? Yorumlara yaz 👇\n\nİkazlar yardımcıdır; yolu her zaman kendi gözünle oku.\n\n#RevvRide #virajlıyollar #motosiklet #motorcu #rota",
+      "alt": "Açık zeminde \"Virajı önceden bil.\" başlığı, \"Dikkat, 200 metre sonra sağa firkete\" ikaz kartı ve rota akışını gösteren telefon."
+    },
+    {
+      "id": "hikaye-04-23ekim-konvoya-cikmadan",
+      "zaman": "2026-10-23T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Konvoya çıkmadan",
+      "gorseller": [
+        "gorseller/hikaye-04-23ekim-konvoya-cikmadan/1.jpg"
+      ]
+    },
+    {
+      "id": "06-24ekim-konvoy-adabi",
+      "zaman": "2026-10-24T10:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Konvoy adabı: 7 kural",
+      "gorseller": [
+        "gorseller/06-24ekim-konvoy-adabi/1.jpg",
+        "gorseller/06-24ekim-konvoy-adabi/2.jpg",
+        "gorseller/06-24ekim-konvoy-adabi/3.jpg",
+        "gorseller/06-24ekim-konvoy-adabi/4.jpg",
+        "gorseller/06-24ekim-konvoy-adabi/5.jpg",
+        "gorseller/06-24ekim-konvoy-adabi/6.jpg",
+        "gorseller/06-24ekim-konvoy-adabi/7.jpg",
+        "gorseller/06-24ekim-konvoy-adabi/8.jpg",
+        "gorseller/06-24ekim-konvoy-adabi/9.jpg"
+      ],
+      "metin": "29 Ekim'de konvoya çıkıyor musun? 🇹🇷🏍️\n\nKalabalık konvoy keyifli ama dikkat ister. Çıkmadan önce bu 7 kuralı kaydet, konvoydaki herkese gönder.\n\nSence en önemli kural hangisi? Yorumlara yaz 👇\n\n#RevvRide #konvoy #29Ekim #motosiklet #motosikletkulübü",
+      "alt": "Konvoy adabı için 7 kural: brifing, lider ve kapanış, şaşırtmalı düzen, sollama yok, el işaretleri, trafik kuralları, kopan sürücü."
+    },
+    {
+      "id": "hikaye-05-26ekim-kirmizida-dur",
+      "zaman": "2026-10-26T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Konvoyda da kırmızıda durulur",
+      "gorseller": [
+        "gorseller/hikaye-05-26ekim-kirmizida-dur/1.jpg"
+      ]
+    },
+    {
+      "id": "07-27ekim-konvoy",
+      "zaman": "2026-10-27T20:00:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Konvoyda kimse geride kalmaz",
+      "gorseller": [
+        "gorseller/07-27ekim-konvoy/1.jpg"
+      ],
+      "metin": "Pazar kahvaltısına 12 motor çıktınız. Biri ışıkta kaldı; kimse fark etmedi mi? 🏍️\n\nRevvRide'da kulüp etkinliğinden konvoyu başlatırsın; \"Katılıyorum\" diyenler kod girmeden katılır. Herkes haritada görünür, biri geride kalırsa herkes kaskından duyar.\n\nKulübünü etiketle 👇\n\n#RevvRide #konvoy #motosikletkulübü #motorcu #motosiklet",
+      "alt": "Turuncu zeminde \"Konvoyda kimse geride kalmaz.\" başlığı, \"Dikkat, arkadaki sürücü koptu\" ikaz kartı ve kulüp etkinliği sayfasını gösteren telefon."
+    },
+    {
+      "id": "hikaye-06-28ekim-konvoy-kurallari",
+      "zaman": "2026-10-28T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Yarın konvoy varsa",
+      "gorseller": [
+        "gorseller/hikaye-06-28ekim-konvoy-kurallari/1.jpg"
+      ]
+    },
+    {
+      "id": "08-29ekim-cumhuriyet",
+      "zaman": "2026-10-29T10:00:00+03:00",
+      "tur": "gonderi",
+      "baslik": "29 Ekim Cumhuriyet Bayramı",
+      "gorseller": [
+        "gorseller/08-29ekim-cumhuriyet/1.jpg"
+      ],
+      "metin": "Cumhuriyetimizin 103. yılı kutlu olsun. 🇹🇷\n\nBugün yola çıkan tüm sürücülere iyi yolculuklar; konvoyda birbirinize göz kulak olun.\n\n#29Ekim #CumhuriyetBayramı #RevvRide",
+      "alt": "Kırmızı zeminde beyaz yazıyla \"29 Ekim\" ve \"Cumhuriyetimizin 103. yılı kutlu olsun.\""
+    },
+    {
+      "id": "09-31ekim-tehlikeler",
+      "zaman": "2026-10-31T10:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Kaskından duyacağın 12 tehlike",
+      "gorseller": [
+        "gorseller/09-31ekim-tehlikeler/1.jpg",
+        "gorseller/09-31ekim-tehlikeler/2.jpg",
+        "gorseller/09-31ekim-tehlikeler/3.jpg",
+        "gorseller/09-31ekim-tehlikeler/4.jpg"
+      ],
+      "metin": "Çukur, mıcır, yağ, kaygan rögar, sis… Yolda ne varsa kaskından duy. ⚠️\n\nRevvRide'da sürücüler gördükleri tehlikeyi tek dokunuşla bildirir; sen yaklaşırken ikaz intercom'undan okunur. Geçerken \"Hâlâ orada\" ya da \"Artık yok\" dersin, bilgi güncel kalır.\n\nSence en tehlikelisi hangisi? Yorumlara yaz 👇\n\n#RevvRide #motosiklet #güvenlisürüş #motorcu #kask",
+      "alt": "Uygulamada bildirilebilen 12 yol tehlikesi: çukur, mıcır, yağ, moloz, kaygan rögar, buzlanma, su birikintisi, yan rüzgâr, sis, kaza, yolda hayvan, yol çalışması."
+    },
+    {
+      "id": "hikaye-07-2kasim-aku",
+      "zaman": "2026-11-02T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Akü kışın yorulur",
+      "gorseller": [
+        "gorseller/hikaye-07-2kasim-aku/1.jpg"
+      ]
+    },
+    {
+      "id": "10-3kasim-kis-bakimi",
+      "zaman": "2026-11-03T20:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Motoru kışa hazırla: 7 madde",
+      "gorseller": [
+        "gorseller/10-3kasim-kis-bakimi/1.jpg",
+        "gorseller/10-3kasim-kis-bakimi/2.jpg",
+        "gorseller/10-3kasim-kis-bakimi/3.jpg",
+        "gorseller/10-3kasim-kis-bakimi/4.jpg"
+      ],
+      "metin": "Sezonu kapatıyorsan motoru öylece garaja çekme. 🔧\n\nAkü, yakıt, lastik, zincir, yağ, antifriz, örtü: 7 maddelik kış listesi kaydırınca. Kaydet, baharda teşekkür edersin.\n\nSen kışın da sürüyor musun, yoksa motor dinlenmede mi? Yorumlara yaz 👇\n\n#RevvRide #motosiklet #motorbakımı #motorcu #kış",
+      "alt": "Motosikleti kışa hazırlamak için 7 madde: akü, yakıt, lastik, zincir, yağ, antifriz, örtü."
+    },
+    {
+      "id": "11-5kasim-rotaya-cevir",
+      "zaman": "2026-11-05T20:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Sürüşünü rotaya çevir",
+      "gorseller": [
+        "gorseller/11-5kasim-rotaya-cevir/1.jpg",
+        "gorseller/11-5kasim-rotaya-cevir/2.jpg",
+        "gorseller/11-5kasim-rotaya-cevir/3.jpg",
+        "gorseller/11-5kasim-rotaya-cevir/4.jpg",
+        "gorseller/11-5kasim-rotaya-cevir/5.jpg"
+      ],
+      "metin": "En güzel yolu bir kez sür, rotası hep cebinde olsun. 🛣️\n\nRevvRide sürüşünü kaydeder; rotaya çevirdiğinde viraj sayısı ve kıvrımlılık kendiliğinden hesaplanır. Mola verdiğin kafeyi, benzinliği, manzara noktasını rotana ekleyebilir, istersen rotayı herkesle paylaşabilirsin.\n\nYakında App Store ve Google Play'de. Haberdar olmak için takip et.\n\n#RevvRide #virajlıyollar #rota #motosiklet #motorcu",
+      "alt": "Sürüşü rotaya çevirmenin adımları: sürüşe başla, mola yerini işaretle, rotaya çevir, paylaş."
+    },
+    {
+      "id": "hikaye-08-6kasim-kisin-surenler",
+      "zaman": "2026-11-06T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Kışın da sürenler",
+      "gorseller": [
+        "gorseller/hikaye-08-6kasim-kisin-surenler/1.jpg"
+      ]
+    },
+    {
+      "id": "12-7kasim-sezonun-yolu",
+      "zaman": "2026-11-07T10:00:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Bu sezonun en güzel yolu",
+      "gorseller": [
+        "gorseller/12-7kasim-sezonun-yolu/1.jpg"
+      ],
+      "metin": "Sezon yavaş yavaş kapanıyor. Bu yıl seni en çok hangi yol mutlu etti? 🛣️\n\nİl ve yol adıyla yorumlara yaz; herkes gelecek bahar için listesine eklesin 👇\n\n#RevvRide #virajlıyollar #motosiklet #motorcu #rota",
+      "alt": "Koyu zeminde virajlı yol çizgisi ve \"Bu sezonun en güzel yolu hangisiydi?\" sorusu."
+    },
+    {
+      "id": "hikaye-9kasim-islak-zemin",
+      "zaman": "2026-11-09T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Islak zeminde fren mesafesi uzar",
+      "gorseller": [
+        "gorseller/hikaye-9kasim-islak-zemin/1.jpg"
+      ],
+      "kaynak": "taslak"
+    },
+    {
+      "id": "10kasim-anma",
+      "zaman": "2026-11-10T09:05:00+03:00",
+      "tur": "gonderi",
+      "baslik": "10 Kasım",
+      "gorseller": [
+        "gorseller/10kasim-anma/1.jpg"
+      ],
+      "metin": "Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk'ü vefatının 88. yılında saygı, minnet ve özlemle anıyoruz. 🇹🇷\n\n#10Kasım #Atatürk",
+      "alt": "Koyu zeminde beyaz yazıyla \"10 Kasım\" ve \"Saygı, minnet ve özlemle anıyoruz.\"",
+      "kaynak": "taslak"
+    },
+    {
+      "id": "11kasim-yagmurda-surus",
+      "zaman": "2026-11-11T20:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Yağmurda sürüş: 5 kural",
+      "gorseller": [
+        "gorseller/11kasim-yagmurda-surus/1.jpg",
+        "gorseller/11kasim-yagmurda-surus/2.jpg",
+        "gorseller/11kasim-yagmurda-surus/3.jpg",
+        "gorseller/11kasim-yagmurda-surus/4.jpg",
+        "gorseller/11kasim-yagmurda-surus/5.jpg",
+        "gorseller/11kasim-yagmurda-surus/6.jpg",
+        "gorseller/11kasim-yagmurda-surus/7.jpg"
+      ],
+      "metin": "Kasımda yağmur sürpriz değil. 🌧️\n\nİlk yağmur, ani hareket, su birikintisi, kısalan görüş… Yağmurda sürmeden önce bu 5 kuralı kaydet, motorcu arkadaşına gönder.\n\nSen yağmurda sürer misin, yoksa beklersin mi? Yorumlara yaz 👇\n\nRevvRide'da sürücüler su birikintisi, kaygan rögar ve buzlanma gibi tehlikeleri bildirir; yaklaşırken kaskından duyarsın. Yakında App Store ve Google Play'de.\n\n#RevvRide #motosiklet #motorcu #güvenlisürüş #yağmur",
+      "alt": "Yağmurda motosiklet sürüşü için 5 kural: ilk yağmur, yumuşak fren ve gaz, takip mesafesi, su birikintisi, görünürlük.",
+      "kaynak": "taslak"
+    },
+    {
+      "id": "12kasim-yagmurda-surer-misin",
+      "zaman": "2026-11-12T20:00:00+03:00",
+      "tur": "gonderi",
+      "baslik": "Yağmurda sürer misin?",
+      "gorseller": [
+        "gorseller/12kasim-yagmurda-surer-misin/1.jpg"
+      ],
+      "metin": "Gökyüzü karardı, kask elinde. Ne yaparsın? 🌧️🏍️\n\n“Sürerim” mi, “Beklerim” mi? Yorumlara yaz, bakalım motorcular ne diyor 👇\n\n#RevvRide #motosiklet #motorcu #motorcular #yağmur",
+      "alt": "Koyu zeminde virajlı yol çizgisi ve \"Yağmur bastırdı. Sürer misin, beklersin mi?\" sorusu.",
+      "kaynak": "taslak"
+    },
+    {
+      "id": "hikaye-13kasim-yagmurluk",
+      "zaman": "2026-11-13T19:00:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Hikâye: Çantanda bunlar var mı?",
+      "gorseller": [
+        "gorseller/hikaye-13kasim-yagmurluk/1.jpg"
+      ],
+      "kaynak": "taslak"
+    },
+    {
+      "id": "14kasim-kulubunu-kur",
+      "zaman": "2026-11-14T10:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Kulübünü RevvRide'a taşı",
+      "gorseller": [
+        "gorseller/14kasim-kulubunu-kur/1.jpg",
+        "gorseller/14kasim-kulubunu-kur/2.jpg",
+        "gorseller/14kasim-kulubunu-kur/3.jpg",
+        "gorseller/14kasim-kulubunu-kur/4.jpg",
+        "gorseller/14kasim-kulubunu-kur/5.jpg",
+        "gorseller/14kasim-kulubunu-kur/6.jpg"
+      ],
+      "metin": "Kulübün WhatsApp grubunda mı kayboluyor? 🏍️\n\nRevvRide'da kulübünü kur: üyelik isteklerini sen onayla, üyelere özel sohbet aç, etkinlik planla. Etkinlik günü konvoyu başlat; “Katılıyorum” diyenler kod girmeden katılır.\n\nKulübünü etiketle, haberleri olsun 👇\n\n#RevvRide #motosikletkulübü #konvoy #motorcu #motosiklet",
+      "alt": "Kulübünü RevvRide'a taşımanın 4 adımı: kulübü kur, üyelere özel sohbet, etkinlik aç, konvoyu başlat.",
+      "kaynak": "taslak"
+    }
+  ]
+}

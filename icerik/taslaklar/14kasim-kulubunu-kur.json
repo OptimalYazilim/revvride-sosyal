@@ -1,0 +1,16 @@
+{
+  "id": "14kasim-kulubunu-kur",
+  "zaman": "2026-11-14T10:00:00+03:00",
+  "tur": "kaydirmali",
+  "baslik": "Kulübünü RevvRide'a taşı",
+  "metin": "Kulübün WhatsApp grubunda mı kayboluyor? 🏍️\n\nRevvRide'da kulübünü kur: üyelik isteklerini sen onayla, üyelere özel sohbet aç, etkinlik planla. Etkinlik günü konvoyu başlat; “Katılıyorum” diyenler kod girmeden katılır.\n\nKulübünü etiketle, haberleri olsun 👇\n\n#RevvRide #motosikletkulübü #konvoy #motorcu #motosiklet",
+  "alt": "Kulübünü RevvRide'a taşımanın 4 adımı: kulübü kur, üyelere özel sohbet, etkinlik aç, konvoyu başlat.",
+  "kareler": [
+    { "sablon": "kapak", "zemin": "acik", "etiket": "KULÜPLER", "baslik": "Kulübünü RevvRide’a taşı.", "metin": "Üyeler, sohbet, etkinlik ve konvoy tek yerde.", "ekran": "kulupler" },
+    { "sablon": "ipucu", "no": "01", "ikon": "flag", "baslik": "Kulübünü kur.", "metin": "İlini ve tarzını seç, logonu ekle. Kimlerin katılacağına üyelik isteklerini onaylayarak sen karar verirsin." },
+    { "sablon": "ipucu", "no": "02", "ikon": "users", "baslik": "Üyelere özel sohbet.", "metin": "Kulüp sohbetinde yalnızca üyeler yazar. İstersen bildirimleri sessize alırsın." },
+    { "sablon": "ipucu", "no": "03", "ikon": "calendar", "baslik": "Etkinlik aç.", "metin": "Buluşma yeri ve saati, kontenjan, bekleme listesi. Buluşmadan yaklaşık iki saat önce herkese hatırlatma gider." },
+    { "sablon": "ipucu", "no": "04", "ikon": "route", "baslik": "Konvoyu başlat.", "metin": "Etkinlik günü “Katılıyorum” diyenler kod girmeden konvoya katılır. Biri geride kalırsa herkes kaskından duyar." },
+    { "sablon": "kapanis", "baslik": "Kulübünle buluş, konvoyla sür.", "metin": "Kulübünü etiketle, haberleri olsun.", "ekran": "etkinlik" }
+  ]
+}

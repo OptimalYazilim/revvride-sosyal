@@ -1,0 +1,16 @@
+{
+  "id": "hikaye-9kasim-islak-zemin",
+  "zaman": "2026-11-09T19:00:00+03:00",
+  "tur": "hikaye",
+  "baslik": "Hikâye: Islak zeminde fren mesafesi uzar",
+  "kareler": [
+    {
+      "sablon": "hikaye",
+      "zemin": "turuncu",
+      "etiket": "HAFTANIN İPUCU",
+      "baslik": "Islak zeminde fren mesafesi uzar.",
+      "metin": "Yağmurda takip mesafeni iki katına çıkar, freni kademeli kullan.",
+      "ikon": "droplet"
+    }
+  ]
+}

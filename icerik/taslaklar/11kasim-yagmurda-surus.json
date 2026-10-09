@@ -1,0 +1,17 @@
+{
+  "id": "11kasim-yagmurda-surus",
+  "zaman": "2026-11-11T20:00:00+03:00",
+  "tur": "kaydirmali",
+  "baslik": "Yağmurda sürüş: 5 kural",
+  "metin": "Kasımda yağmur sürpriz değil. 🌧️\n\nİlk yağmur, ani hareket, su birikintisi, kısalan görüş… Yağmurda sürmeden önce bu 5 kuralı kaydet, motorcu arkadaşına gönder.\n\nSen yağmurda sürer misin, yoksa beklersin mi? Yorumlara yaz 👇\n\nRevvRide'da sürücüler su birikintisi, kaygan rögar ve buzlanma gibi tehlikeleri bildirir; yaklaşırken kaskından duyarsın. Yakında App Store ve Google Play'de.\n\n#RevvRide #motosiklet #motorcu #güvenlisürüş #yağmur",
+  "alt": "Yağmurda motosiklet sürüşü için 5 kural: ilk yağmur, yumuşak fren ve gaz, takip mesafesi, su birikintisi, görünürlük.",
+  "kareler": [
+    { "sablon": "kapak", "zemin": "koyu", "etiket": "YAĞMURDA SÜRÜŞ", "baslik": "Yağmurda sürüş: 5 kural.", "metin": "Islak yolda lastiğin tutuşu belirgin şekilde düşer. Kaydet, yağmur bastırmadan bir göz at.", "ikon": "droplet" },
+    { "sablon": "ipucu", "no": "01", "ikon": "droplet", "baslik": "İlk yağmur en kaygandır.", "metin": "Uzun kuru günlerden sonra yağan ilk yağmurda yoldaki yağ ve toz yüzeye çıkar. İlk yarım saat her zamankinden yavaş sür." },
+    { "sablon": "ipucu", "no": "02", "ikon": "hand", "baslik": "Freni ve gazı yumuşak kullan.", "metin": "Ani hareket tutuşu koparır. Fren, gaz ve direksiyonu kademeli kullan; virajda motoru olabildiğince dik tut." },
+    { "sablon": "ipucu", "no": "03", "ikon": "motorcycle", "baslik": "Takip mesafeni iki katına çıkar.", "metin": "Islak zeminde durma mesafesi uzar. Öndeki araçla aranı aç, ani frene yer bırak." },
+    { "sablon": "ipucu", "no": "04", "ikon": "umbrella", "baslik": "Su birikintisine girme.", "metin": "Altında çukur olabilir, lastik kızaklayabilir. Kaçamıyorsan motoru dik tut, sabit gazla geç." },
+    { "sablon": "ipucu", "no": "05", "ikon": "shield", "baslik": "Görün, görünür ol.", "metin": "Vizörünü temiz tut, farın açık olsun. Parlak renkli bir yağmurluk seni yoldaki herkese gösterir." },
+    { "sablon": "kapanis", "baslik": "Su birikintisini önceden duy.", "metin": "RevvRide’da sürücüler su birikintisi, kaygan rögar ve buzlanmayı bildirir; yaklaşırken kaskından duyarsın.", "ekran": "surus" }
+  ]
+}

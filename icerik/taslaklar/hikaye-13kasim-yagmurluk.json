@@ -1,0 +1,16 @@
+{
+  "id": "hikaye-13kasim-yagmurluk",
+  "zaman": "2026-11-13T19:00:00+03:00",
+  "tur": "hikaye",
+  "baslik": "Hikâye: Çantanda bunlar var mı?",
+  "kareler": [
+    {
+      "sablon": "hikaye",
+      "zemin": "koyu",
+      "etiket": "HAFTA SONU",
+      "baslik": "Çantanda bunlar var mı?",
+      "metin": "Kasımda hava bir saatte dönüyor.",
+      "maddeler": ["Yağmurluk", "Yedek eldiven", "Vizör bezi", "Telefon şarj kablosu"]
+    }
+  ]
+}
