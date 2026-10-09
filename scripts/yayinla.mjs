@@ -315,15 +315,13 @@ async function mesajlar(ig, ben) {
       kimden_var: sirali.filter((m) => m.from?.id).length,
       bizden: sirali.filter(bizdenMi).length,
       yeni: yeni.length,
+      alanlar: [...new Set(sirali.flatMap((m) => Object.keys(m)))].sort(),
     });
     if (!yeni.length) continue;
     const isaretle = () => yeni.forEach((m) => (kayit.yanitlanan[ozet(m.id)] = SIMDI.toISOString()));
     const kOzet = ozet(k.id);
     const metin = yeni.map((m) => m.message ?? '').filter(Boolean).join('\n');
-    if (!metin.trim()) {
-      isaretle(); // yalnızca tepki ya da ek var: sessiz geç
-      continue;
-    }
+    if (!metin.trim()) continue; // metin yok (tepki, ek ya da henüz okunamayan istek): işaretlemeden geç, sonra yeniden bakılır
     const konu = konuBul(metin);
     // Aynı konuşmada: aynı konuya 6 saatte bir, günde en fazla 3 otomatik cevap (botlarla karşılıklı döngüye girmesin).
     const gun = SIMDI.toISOString().slice(0, 10);
