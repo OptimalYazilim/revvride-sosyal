@@ -348,6 +348,16 @@
       "one_cikan": "SSS"
     },
     {
+      "id": "one-cikan-1-nasil-kapak-arsiv",
+      "zaman": "2026-10-09T17:06:00+03:00",
+      "tur": "hikaye",
+      "baslik": "Öne çıkan \"Nasıl?\" kapak",
+      "gorseller": [
+        "gorseller/one-cikan-1-nasil-kapak/1.jpg"
+      ],
+      "one_cikan": "Nasıl?"
+    },
+    {
       "id": "hikaye-01-12ekim-islak-yaprak",
       "zaman": "2026-10-12T19:00:00+03:00",
       "tur": "hikaye",
