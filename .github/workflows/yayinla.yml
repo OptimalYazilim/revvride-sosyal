@@ -4,7 +4,8 @@ name: Yayınla
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    # Saat başları GitHub'da en yoğun zamandır; çalışmalar gecikmesin diye 4. dakikadan başlar.
+    - cron: '4,19,34,49 * * * *'
   workflow_dispatch:
 
 permissions:
