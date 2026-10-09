@@ -293,6 +293,7 @@ async function mesajlar(ig, ben) {
   }
 
   let gonderilen = 0;
+  const teshis = []; // yalnızca sayılar: içerik ya da kimlik yazılmaz
   const pencerede = konusmalar.filter((k) => new Date(k.updated_time).getTime() >= pencere).length;
   console.log(`Mesajlar: ${konusmalar.length} konuşma görünüyor, ${pencerede} tanesi son 24 saatte.`);
   kayit.gorunen = { konusma: konusmalar.length, son_24_saat: pencerede };
@@ -308,6 +309,13 @@ async function mesajlar(ig, ben) {
         (!sonBizden || new Date(m.created_time) > new Date(sonBizden.created_time)) &&
         !kayit.yanitlanan[ozet(m.id)],
     );
+    teshis.push({
+      mesaj: sirali.length,
+      metinli: sirali.filter((m) => (m.message ?? '').trim()).length,
+      kimden_var: sirali.filter((m) => m.from?.id).length,
+      bizden: sirali.filter(bizdenMi).length,
+      yeni: yeni.length,
+    });
     if (!yeni.length) continue;
     const isaretle = () => yeni.forEach((m) => (kayit.yanitlanan[ozet(m.id)] = SIMDI.toISOString()));
     const kOzet = ozet(k.id);
@@ -354,6 +362,7 @@ async function mesajlar(ig, ben) {
   for (const [a, z] of Object.entries(kayit.yanitlanan)) if (new Date(z).getTime() < hafta) delete kayit.yanitlanan[a];
   for (const [a, v] of Object.entries(kayit.konusma)) if (new Date(v?.zaman ?? v).getTime() < hafta) delete kayit.konusma[a];
   kayit.son_kontrol = SIMDI.toISOString();
+  kayit.son_teshis = teshis;
   yazJson('durum/mesajlar.json', kayit);
   if (gonderilen) console.log(`${gonderilen} mesaja otomatik cevap verildi.`);
 }
