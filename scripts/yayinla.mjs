@@ -444,7 +444,8 @@ for (const oge of beklemede ? [] : sirali) {
 
 await istatistik(IG).catch((e) => console.log(`İstatistik alınamadı: ${e.message}`));
 await yorumlar(IG, ben.username).catch((e) => console.log(`Yorumlar işlenemedi: ${e.message}`));
-if (!beklemede) await mesajlar(IG, ben).catch((e) => console.log(`Mesajlar işlenemedi: ${e.message}`));
+// Instagram'ın paylaşım sınırı gönderi/hikâye içindir; mesaj cevapları beklemede de sürer.
+await mesajlar(IG, ben).catch((e) => console.log(`Mesajlar işlenemedi: ${e.message}`));
 
 if (hatalar.length) {
   console.log(`\n${hatalar.length} öğe paylaşılamadı; sonraki çalışmada yeniden denenecek:\n- ${hatalar.join('\n- ')}`);
