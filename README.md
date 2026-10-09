@@ -45,6 +45,10 @@ kendisi yeniler, bir daha yapıştırman gerekmez.
 
 - **Öne çıkanlar:** Instagram'ın API'si öne çıkan oluşturmaya izin vermiyor; ilk 6 öne çıkan instagram.com'dan
   elle oluşturuldu. Yenisi gerekirse aynı yoldan eklenir.
-- **Mesaj (DM) cevapları:** kapalı. Yorum cevapları açık; spam, hakaret ve siyasete cevap verilmez.
+- **Mesaj (DM) cevapları:** açık. Yayıncı son 24 saatte gelen mesajlara konuya göre hazır cevap verir
+  ([scripts/mesaj-sablonlari.mjs](scripts/mesaj-sablonlari.mjs)). Mesajlar özel olduğu için içerikleri hiçbir yere
+  yazılmaz ve Claude'a gönderilmez. Sen elle cevap verdiysen sistem araya girmez. İş birliği, şikâyet ve
+  tanınmayan sorular `durum/mesajlar.json`'da `insan_bekleyen` olarak sayılır; bunlara Instagram'dan bakman iyi olur.
+- **Yorum cevapları:** açık; spam, hakaret ve siyasete cevap verilmez.
 - **Uygulama mağazaya çıkınca:** `icerik/ayarlar.json`'daki yazı "App Store ve Google Play'de" yapılır,
   biyografiye indirme bağlantısı eklenir.

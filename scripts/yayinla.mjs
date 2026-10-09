@@ -14,6 +14,7 @@ import { createCipheriv, createDecipheriv, createHash, randomBytes } from 'node:
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 
 import { metinDenetle } from './kurallar.mjs';
+import { konuBul } from './mesaj-sablonlari.mjs';
 
 const API = process.env.IG_API ?? 'https://graph.instagram.com'; // testte sahte sunucu verilebilir
 const REPO = process.env.GITHUB_REPOSITORY;
@@ -254,8 +255,98 @@ async function yorumlar(ig, kullanici) {
   yazJson('durum/yorumlar.json', kayit);
 }
 
+// ------------------------------------------------------------------ mesajlar (DM)
+/*
+ * Son 24 saatte gelen mesajlara konuya göre hazır cevap verir (scripts/mesaj-sablonlari.mjs).
+ * Mesaj içeriği ve kişi bilgisi hiçbir yere yazılmaz; yalnızca kimliklerin özeti (hash) ve konu sayıları tutulur.
+ * Sahibi elle cevap verdiyse araya girmez; aynı konuşmaya 6 saatte en fazla bir otomatik cevap gider.
+ */
+async function mesajlar(ig, ben) {
+  const kayit = okuJson('durum/mesajlar.json', { izin: null, yanitlanan: {}, konusma: {}, sayac: {}, insan_bekleyen: 0 });
+  const ozet = (s) => createHash('sha256').update(String(s)).digest('hex').slice(0, 16);
+  const bizim = new Set([String(ig), String(ben.id ?? '')].filter(Boolean));
+  const bizdenMi = (m) => bizim.has(String(m.from?.id)) || m.from?.username === ben.username;
+  const pencere = SIMDI.getTime() - 23 * 36e5; // Instagram 24 saat içinde cevaba izin verir (1 saat pay)
+
+  let konusmalar;
+  try {
+    konusmalar = (await api('GET', 'me/conversations', { platform: 'instagram', fields: 'id,updated_time', limit: '25' })).data ?? [];
+    kayit.izin = true;
+  } catch (e) {
+    if (/permission|\(#10\)|\(#200\)|\(#3\)/i.test(e.message) || [3, 10, 200].includes(e.kod)) {
+      if (kayit.izin !== false) console.log(`Mesajları okuma izni yok (instagram_business_manage_messages): ${e.message}`);
+      kayit.izin = false;
+      yazJson('durum/mesajlar.json', kayit);
+      return;
+    }
+    throw e;
+  }
+
+  let gonderilen = 0;
+  for (const k of konusmalar) {
+    if (new Date(k.updated_time).getTime() < pencere) continue;
+    const mesajlar = (await api('GET', k.id, { fields: 'messages.limit(10){id,created_time,from,message}' })).messages?.data ?? [];
+    const sirali = [...mesajlar].sort((a, b) => new Date(a.created_time) - new Date(b.created_time));
+    const sonBizden = sirali.filter(bizdenMi).pop();
+    const yeni = sirali.filter(
+      (m) =>
+        !bizdenMi(m) &&
+        new Date(m.created_time).getTime() >= pencere &&
+        (!sonBizden || new Date(m.created_time) > new Date(sonBizden.created_time)) &&
+        !kayit.yanitlanan[ozet(m.id)],
+    );
+    if (!yeni.length) continue;
+    const isaretle = () => yeni.forEach((m) => (kayit.yanitlanan[ozet(m.id)] = SIMDI.toISOString()));
+    const kOzet = ozet(k.id);
+    const metin = yeni.map((m) => m.message ?? '').filter(Boolean).join('\n');
+    if (!metin.trim()) {
+      isaretle(); // yalnızca tepki ya da ek var: sessiz geç
+      continue;
+    }
+    const konu = konuBul(metin);
+    // Aynı konuşmada: aynı konuya 6 saatte bir, günde en fazla 3 otomatik cevap (botlarla karşılıklı döngüye girmesin).
+    const gun = SIMDI.toISOString().slice(0, 10);
+    const onceki = typeof kayit.konusma[kOzet] === 'object' ? kayit.konusma[kOzet] : null;
+    const bugunku = onceki?.gun === gun ? onceki.sayi : 0;
+    const ayniKonuYakin = onceki && onceki.konu === konu.ad && SIMDI - new Date(onceki.zaman) < 6 * 36e5;
+    if (ayniKonuYakin || bugunku >= 3) {
+      isaretle();
+      continue;
+    }
+    const sorun = metinDenetle({ metin: konu.cevap, gonderiMi: false });
+    if (sorun.length) {
+      console.log(`Mesaj şablonu "${konu.ad}" denetimden geçmedi: ${sorun.join(', ')}`);
+      continue;
+    }
+    if (KURU) {
+      console.log(`[deneme] mesaja "${konu.ad}" cevabı gidecekti.`);
+      continue;
+    }
+    try {
+      const kisi = yeni[yeni.length - 1].from.id;
+      await api('POST', `${ig}/messages`, { recipient: JSON.stringify({ id: kisi }), message: JSON.stringify({ text: konu.cevap }) });
+      isaretle();
+      kayit.konusma[kOzet] = { zaman: SIMDI.toISOString(), konu: konu.ad, gun, sayi: bugunku + 1 };
+      kayit.sayac[konu.ad] = (kayit.sayac[konu.ad] ?? 0) + 1;
+      if (konu.insan) kayit.insan_bekleyen = (kayit.insan_bekleyen ?? 0) + 1;
+      gonderilen++;
+    } catch (e) {
+      console.log(`Mesaja cevap gönderilemedi (${konu.ad}): ${e.message}`);
+      if (sinirHatasi(e)) break;
+    }
+  }
+
+  // Bir haftadan eski özetler silinir; dosya küçük kalsın.
+  const hafta = SIMDI.getTime() - 7 * 864e5;
+  for (const [a, z] of Object.entries(kayit.yanitlanan)) if (new Date(z).getTime() < hafta) delete kayit.yanitlanan[a];
+  for (const [a, v] of Object.entries(kayit.konusma)) if (new Date(v?.zaman ?? v).getTime() < hafta) delete kayit.konusma[a];
+  kayit.son_kontrol = SIMDI.toISOString();
+  yazJson('durum/mesajlar.json', kayit);
+  if (gonderilen) console.log(`${gonderilen} mesaja otomatik cevap verildi.`);
+}
+
 // ------------------------------------------------------------------ ana akış
-const ben = await api('GET', 'me', { fields: 'user_id,username,account_type' });
+const ben = await api('GET', 'me', { fields: 'id,user_id,username,account_type' });
 if (!['BUSINESS', 'MEDIA_CREATOR'].includes(ben.account_type)) {
   console.log(`Hesap türü ${ben.account_type}: API ile paylaşım için profesyonel (İşletme ya da İçerik üreticisi) hesap gerekir.`);
   process.exit(1);
@@ -324,6 +415,7 @@ for (const oge of beklemede ? [] : sirali) {
 
 await istatistik(IG).catch((e) => console.log(`İstatistik alınamadı: ${e.message}`));
 await yorumlar(IG, ben.username).catch((e) => console.log(`Yorumlar işlenemedi: ${e.message}`));
+if (!beklemede) await mesajlar(IG, ben).catch((e) => console.log(`Mesajlar işlenemedi: ${e.message}`));
 
 if (hatalar.length) {
   console.log(`\n${hatalar.length} öğe paylaşılamadı; sonraki çalışmada yeniden denenecek:\n- ${hatalar.join('\n- ')}`);
