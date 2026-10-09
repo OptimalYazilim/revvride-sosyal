@@ -106,6 +106,13 @@ export const KONULAR = [
   },
 ];
 
+/** Metni okunamayan hikâye yanıtları için (Instagram bazı hikâye yanıtlarının metnini API'ye vermiyor). */
+export const HIKAYE_YANITI = {
+  ad: 'hikaye-yaniti',
+  cevap: 'Hikâyemize yazdığın için teşekkürler! 🧡 RevvRide çok yakında App Store ve Google Play\'de. Nasıl çalıştığını profilimizdeki "Nasıl?" öne çıkanında adım adım görebilirsin; başka sorun olursa buradan yaz.',
+  insan: true,
+};
+
 export const VARSAYILAN = {
   ad: 'diger',
   cevap: 'Mesajın için teşekkürler! 🏍️ Ekibimiz en kısa sürede dönecek. Bu arada sık sorulan soruların cevapları profilimizdeki öne çıkanlarda.',

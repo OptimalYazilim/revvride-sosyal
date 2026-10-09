@@ -14,7 +14,7 @@ import { createCipheriv, createDecipheriv, createHash, randomBytes } from 'node:
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 
 import { metinDenetle } from './kurallar.mjs';
-import { konuBul } from './mesaj-sablonlari.mjs';
+import { HIKAYE_YANITI, konuBul } from './mesaj-sablonlari.mjs';
 
 const API = process.env.IG_API ?? 'https://graph.instagram.com'; // testte sahte sunucu verilebilir
 const REPO = process.env.GITHUB_REPOSITORY;
@@ -320,9 +320,18 @@ async function mesajlar(ig, ben) {
     if (!yeni.length) continue;
     const isaretle = () => yeni.forEach((m) => (kayit.yanitlanan[ozet(m.id)] = SIMDI.toISOString()));
     const kOzet = ozet(k.id);
+    // Hikâye yanıtlarında metin konuşma sorgusunda boş gelebiliyor: mesaj tek başına ayrıntılı alanlarla sorulur.
+    let hikayeYaniti = false;
+    for (const m of yeni) {
+      if ((m.message ?? '').trim()) continue;
+      const d = await api('GET', m.id, { fields: 'message,story,is_unsupported,attachments' }).catch(() => ({}));
+      if ((d.message ?? '').trim()) m.message = d.message;
+      if (d.story) hikayeYaniti = true;
+      teshis[teshis.length - 1].ayrinti = { metin_geldi: Boolean((d.message ?? '').trim()), hikaye: Boolean(d.story), desteklenmiyor: Boolean(d.is_unsupported), ek: Boolean(d.attachments) };
+    }
     const metin = yeni.map((m) => m.message ?? '').filter(Boolean).join('\n');
-    if (!metin.trim()) continue; // metin yok (tepki, ek ya da henüz okunamayan istek): işaretlemeden geç, sonra yeniden bakılır
-    const konu = konuBul(metin);
+    if (!metin.trim() && !hikayeYaniti) continue; // metin yok (tepki ya da ek): işaretlemeden geç, sonra yeniden bakılır
+    const konu = metin.trim() ? konuBul(metin) : HIKAYE_YANITI;
     // Aynı konuşmada: aynı konuya 6 saatte bir, günde en fazla 3 otomatik cevap (botlarla karşılıklı döngüye girmesin).
     const gun = SIMDI.toISOString().slice(0, 10);
     const onceki = typeof kayit.konusma[kOzet] === 'object' ? kayit.konusma[kOzet] : null;
