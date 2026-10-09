@@ -27,6 +27,12 @@ export const KONULAR = [
     cevap: 'Geçmiş olsun. Acil bir durumdaysan lütfen hemen 112\'yi ara. RevvRide 112\'nin yerine geçmez; önce 112.',
   },
   {
+    ad: 'veri-silme',
+    kelime: /verilerimi sil|veri sil|bilgilerimi sil|kvkk|gdpr|kisisel veri/,
+    cevap: 'Talebini aldık. Yorumuna ya da mesajına ait kayıtları (varsa) en geç 30 gün içinde sileceğiz. Mesaj içerikleri zaten saklanmıyor. 🙏',
+    insan: true,
+  },
+  {
     ad: 'is-birligi',
     kelime: /is birligi|isbirligi|reklam|sponsor|partner|ortaklik|influencer|tanitim yap|collab|marka/,
     cevap: 'İş birliği teklifin için teşekkürler! 🙌 Ekibimize ilettik; uygun bulursak seninle buradan iletişime geçeceğiz.',

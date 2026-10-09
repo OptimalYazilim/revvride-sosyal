@@ -218,6 +218,16 @@ async function yorumlar(ig, kullanici) {
   }
   if (gonderilen) console.log(`${gonderilen} yoruma cevap verildi.`);
 
+  // Gizlilik: işi biten yorumun metni kayıttan silinir; 30 günden eski kayıtlar tamamen temizlenir (GIZLILIK.md).
+  const otuzGun = SIMDI.getTime() - 30 * 864e5;
+  for (const [id, y] of Object.entries(kayit.kuyruk)) {
+    if (y.durum !== 'bekliyor') {
+      delete y.metin;
+      delete y.gonderi;
+    }
+    if (new Date(y.zaman).getTime() < otuzGun) delete kayit.kuyruk[id];
+  }
+
   // 2) Yeni yorumları topla (30 dakikada bir yeter).
   if (!kayit.son_kontrol || SIMDI - new Date(kayit.son_kontrol) >= 29 * 60e3) {
     const sinir = SIMDI.getTime() - YORUM_GUN * 864e5;
