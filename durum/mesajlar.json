@@ -22,12 +22,25 @@
     "hikaye-yaniti": 1
   },
   "insan_bekleyen": 1,
-  "son_kontrol": "2026-10-09T15:20:57.900Z",
+  "son_kontrol": "2026-10-09T15:25:34.778Z",
   "gorunen": {
     "konusma": 2,
     "son_24_saat": 2
   },
   "son_teshis": [
+    {
+      "mesaj": 2,
+      "metinli": 1,
+      "kimden_var": 2,
+      "bizden": 1,
+      "yeni": 0,
+      "alanlar": [
+        "created_time",
+        "from",
+        "id",
+        "message"
+      ]
+    },
     {
       "mesaj": 2,
       "metinli": 2,
@@ -40,25 +53,6 @@
         "id",
         "message"
       ]
-    },
-    {
-      "mesaj": 1,
-      "metinli": 0,
-      "kimden_var": 1,
-      "bizden": 0,
-      "yeni": 1,
-      "alanlar": [
-        "created_time",
-        "from",
-        "id",
-        "message"
-      ],
-      "ayrinti": {
-        "metin_geldi": false,
-        "hikaye": true,
-        "desteklenmiyor": false,
-        "ek": false
-      }
     }
   ]
 }
