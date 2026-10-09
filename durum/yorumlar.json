@@ -2,12 +2,13 @@
   "izin": true,
   "kuyruk": {
     "17949998235318699": {
-      "durum": "bekliyor",
+      "durum": "yanitlandi",
       "media_id": "18074811050724078",
-      "gonderi": "Chopper mı, sport mu, adventure mı? 🤔 Numaranı yorumlara yaz 👇",
-      "metin": "Klasik olan🏍️",
-      "zaman": "2026-10-09T14:02:13+0000"
+      "zaman": "2026-10-09T14:02:13+0000",
+      "yanit": "Klasik sürüşün tadı bambaşka, seçimin için teşekkürler! 🏍️",
+      "yanit_id": "18118849333974029",
+      "yanitlanma": "2026-10-09T16:53:41.799Z"
     }
   },
-  "son_kontrol": "2026-10-09T15:18:40.068Z"
+  "son_kontrol": "2026-10-09T16:53:39.056Z"
 }
