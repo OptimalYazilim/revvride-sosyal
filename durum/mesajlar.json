@@ -4,5 +4,9 @@
   "konusma": {},
   "sayac": {},
   "insan_bekleyen": 0,
-  "son_kontrol": "2026-10-09T14:46:30.936Z"
+  "son_kontrol": "2026-10-09T14:53:06.351Z",
+  "gorunen": {
+    "konusma": 0,
+    "son_24_saat": 0
+  }
 }
