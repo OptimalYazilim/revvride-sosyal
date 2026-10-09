@@ -275,8 +275,15 @@ const sonMetinler = new Set(
     .filter(Boolean),
 );
 
+// Instagram "çok fazla işlem" derse bir süre hiç paylaşım denenmez (hesabı kısıtlamaya sokmamak için).
+const BEKLEME_SAAT = 3;
+const bekleme = okuJson('durum/bekleme.json', null);
+const beklemede = bekleme && new Date(bekleme.kadar) > SIMDI;
+if (beklemede) console.log(`Instagram sınırı nedeniyle ${bekleme.kadar} zamanına kadar paylaşım yapılmıyor.`);
+const sinirHatasi = (e) => /too many actions|request limit|rate limit|çok fazla/i.test(e.message) || [4, 9, 17, 32, 613].includes(e.kod);
+
 const hatalar = [];
-for (const oge of sirali) {
+for (const oge of beklemede ? [] : sirali) {
   if (kayitlar[oge.id]) continue;
   const zaman = new Date(oge.zaman);
   if (zaman > SIMDI) continue;
@@ -303,9 +310,15 @@ for (const oge of sirali) {
     yazJson('durum/yayinlananlar.json', kayitlar);
     console.log(`Paylaşıldı: ${oge.id} ${r.permalink ?? ''}`);
   } catch (e) {
-    hatalar.push(`${oge.id}: ${e.message}`);
     console.log(`HATA ${oge.id}: ${e.message}`);
-    if (e.kod === 4 || e.kod === 9 || e.kod === 190) break; // kota ya da geçersiz anahtar: bu turu bitir
+    if (sinirHatasi(e)) {
+      const kadar = new Date(SIMDI.getTime() + BEKLEME_SAAT * 36e5).toISOString();
+      yazJson('durum/bekleme.json', { kadar, neden: e.message });
+      console.log(`Instagram sınırı: ${BEKLEME_SAAT} saat paylaşım yapılmayacak (${kadar}).`);
+      break; // sınır bir hata değil, bekleme: çalışma başarılı sayılır
+    }
+    hatalar.push(`${oge.id}: ${e.message}`);
+    if (e.kod === 190) break; // geçersiz anahtar: bu turu bitir
   }
 }
 
