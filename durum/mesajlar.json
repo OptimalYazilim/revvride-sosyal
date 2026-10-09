@@ -13,7 +13,7 @@
     "cikis": 1
   },
   "insan_bekleyen": 0,
-  "son_kontrol": "2026-10-09T15:13:24.295Z",
+  "son_kontrol": "2026-10-09T15:18:40.068Z",
   "gorunen": {
     "konusma": 2,
     "son_24_saat": 2
@@ -24,14 +24,26 @@
       "metinli": 2,
       "kimden_var": 2,
       "bizden": 1,
-      "yeni": 0
+      "yeni": 0,
+      "alanlar": [
+        "created_time",
+        "from",
+        "id",
+        "message"
+      ]
     },
     {
       "mesaj": 1,
       "metinli": 0,
       "kimden_var": 1,
       "bizden": 0,
-      "yeni": 0
+      "yeni": 1,
+      "alanlar": [
+        "created_time",
+        "from",
+        "id",
+        "message"
+      ]
     }
   ]
 }
