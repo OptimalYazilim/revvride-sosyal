@@ -46,10 +46,10 @@
     "selam": 1
   },
   "insan_bekleyen": 2,
-  "son_kontrol": "2026-10-10T15:49:43.336Z",
+  "son_kontrol": "2026-10-10T16:04:00.942Z",
   "gorunen": {
     "konusma": 4,
-    "son_24_saat": 2
+    "son_24_saat": 1
   },
   "son_teshis": [
     {
@@ -57,19 +57,6 @@
       "metinli": 4,
       "kimden_var": 4,
       "bizden": 2,
-      "yeni": 0,
-      "alanlar": [
-        "created_time",
-        "from",
-        "id",
-        "message"
-      ]
-    },
-    {
-      "mesaj": 2,
-      "metinli": 2,
-      "kimden_var": 2,
-      "bizden": 1,
       "yeni": 0,
       "alanlar": [
         "created_time",
