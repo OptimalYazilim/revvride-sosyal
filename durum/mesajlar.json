@@ -3,7 +3,8 @@
   "yanitlanan": {
     "bc4976dfc9de0b3b": "2026-10-09T15:20:57.900Z",
     "14bcf740b96ab2a5": "2026-10-09T15:31:28.069Z",
-    "b0986a0068424e2c": "2026-10-09T16:53:39.056Z"
+    "b0986a0068424e2c": "2026-10-09T16:53:39.056Z",
+    "10d4b15247703c60": "2026-10-10T14:08:46.423Z"
   },
   "konusma": {
     "daf1516a5a8e680c": {
@@ -29,20 +30,40 @@
       "konu": "cikis",
       "gun": "2026-10-09",
       "sayi": 1
+    },
+    "262facdcc6654cf4": {
+      "zaman": "2026-10-10T14:08:46.423Z",
+      "konu": "selam",
+      "gun": "2026-10-10",
+      "sayi": 1
     }
   },
   "sayac": {
     "cikis": 2,
     "hikaye-yaniti": 1,
-    "diger": 1
+    "diger": 1,
+    "selam": 1
   },
   "insan_bekleyen": 2,
-  "son_kontrol": "2026-10-10T13:54:26.147Z",
+  "son_kontrol": "2026-10-10T14:08:46.423Z",
   "gorunen": {
-    "konusma": 3,
+    "konusma": 4,
     "son_24_saat": 3
   },
   "son_teshis": [
+    {
+      "mesaj": 1,
+      "metinli": 1,
+      "kimden_var": 1,
+      "bizden": 0,
+      "yeni": 1,
+      "alanlar": [
+        "created_time",
+        "from",
+        "id",
+        "message"
+      ]
+    },
     {
       "mesaj": 2,
       "metinli": 2,
@@ -59,19 +80,6 @@
     {
       "mesaj": 2,
       "metinli": 1,
-      "kimden_var": 2,
-      "bizden": 1,
-      "yeni": 0,
-      "alanlar": [
-        "created_time",
-        "from",
-        "id",
-        "message"
-      ]
-    },
-    {
-      "mesaj": 2,
-      "metinli": 2,
       "kimden_var": 2,
       "bizden": 1,
       "yeni": 0,
