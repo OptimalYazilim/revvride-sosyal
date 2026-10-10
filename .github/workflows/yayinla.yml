@@ -1,4 +1,10 @@
 # Zamanı gelen Instagram gönderilerini paylaşır. GitHub'ın sunucularında 15 dakikada bir çalışır.
+#
+# GitHub'ın zamanlayıcısı (cron) yoğun saatlerde çalışmaları saatlerce geciktirebiliyor. Bu yüzden her
+# çalışma bittiğinde bir sonrakini kendisi başlatır (scripts/sonraki.mjs); o da "zamanlayici" ortamının
+# bekleme süresi (Settings > Environments > zamanlayici > Wait timer: 14 dk) dolunca paylaşıma geçer.
+# Cron yalnızca yedektir: zincir koparsa onu yeniden başlatır.
+#
 # Durdurmak için: Actions > Yayınla > ••• > Disable workflow.
 name: Yayınla
 
@@ -7,20 +13,39 @@ on:
     # Saat başları GitHub'da en yoğun zamandır; çalışmalar gecikmesin diye 4. dakikadan başlar.
     - cron: '4,19,34,49 * * * *'
   workflow_dispatch:
+    inputs:
+      zincir:
+        description: 'Önceki çalışmanın başlattığı halka (elle çalıştırırken işaretleme)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
-
-concurrency:
-  group: yayinla
-  cancel-in-progress: false
+  actions: write # bir sonraki çalışmayı başlatmak için
 
 jobs:
+  # Zincirdeki çalışma bekleme süresi dolana kadar burada bekler; elle ve cron ile başlayanlar beklemez.
+  bekle:
+    if: ${{ inputs.zincir }}
+    runs-on: ubuntu-latest
+    environment: zamanlayici
+    steps:
+      - run: echo "Bekleme süresi doldu."
+
   yayinla:
+    needs: bekle
+    if: ${{ !cancelled() && needs.bekle.result != 'failure' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    concurrency:
+      group: yayinla
+      cancel-in-progress: false
     steps:
+      # Tetiklendiği andaki sürümü değil, güncelini çeker: zincirdeki çalışma 15 dakika sonra koşar ve
+      # o arada paylaşılanlar (durum/) ile yeni içerik eskisiyle ezilmemeli.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -32,7 +57,7 @@ jobs:
       - name: Zamanı gelenleri paylaş
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
-        run: node scripts/yayinla.mjs
+        run: YAYIN_SHA=$(git rev-parse HEAD) node scripts/yayinla.mjs
 
       - name: Durumu kaydet
         if: always()
@@ -45,3 +70,10 @@ jobs:
             git pull --rebase --autostash
             git push
           fi
+
+      - name: Sıradaki çalışmayı başlat
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ZINCIR: ${{ inputs.zincir }}
+        run: node scripts/sonraki.mjs

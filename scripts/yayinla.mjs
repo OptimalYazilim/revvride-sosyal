@@ -8,7 +8,8 @@
  *   anahtarla şifreli durur (AES-256-GCM); IG_TOKEN olmadan çözülemez.
  * - Günde bir kez son gönderilerin sayıları durum/istatistik.json'a yazılır (içerik ajansı buna bakar).
  *
- * Ortam: IG_TOKEN, GITHUB_REPOSITORY, GITHUB_SHA. Deneme: KURU=1 (paylaşmaz), SIMDI=<ISO> (saati değiştirir).
+ * Ortam: IG_TOKEN, GITHUB_REPOSITORY, YAYIN_SHA (çekilen sürüm; yoksa GITHUB_SHA).
+ * Deneme: KURU=1 (paylaşmaz), SIMDI=<ISO> (saati değiştirir).
  */
 import { createCipheriv, createDecipheriv, createHash, randomBytes } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
@@ -18,7 +19,9 @@ import { HIKAYE_YANITI, konuBul } from './mesaj-sablonlari.mjs';
 
 const API = process.env.IG_API ?? 'https://graph.instagram.com'; // testte sahte sunucu verilebilir
 const REPO = process.env.GITHUB_REPOSITORY;
-const SHA = process.env.GITHUB_SHA;
+// Görsel adresleri bu sürüme bağlanır. GITHUB_SHA çalışmanın tetiklendiği andaki sürümdür; zincirdeki
+// çalışma ondan 15 dakika sonra güncel sürümü çektiği için iş akışı çekilen sürümü YAYIN_SHA ile verir.
+const SHA = process.env.YAYIN_SHA ?? process.env.GITHUB_SHA;
 const SIMDI = process.env.SIMDI ? new Date(process.env.SIMDI) : new Date();
 const KURU = process.env.KURU === '1';
 /** Bu kadar saatten fazla geciken öğe paylaşılmaz (sistem kapalı kaldıysa eski içerik sel gibi akmasın). */
