@@ -5,7 +5,8 @@
     "14bcf740b96ab2a5": "2026-10-09T15:31:28.069Z",
     "b0986a0068424e2c": "2026-10-09T16:53:39.056Z",
     "10d4b15247703c60": "2026-10-10T14:08:46.423Z",
-    "59ee7288d3f0615f": "2026-10-10T14:37:26.334Z"
+    "59ee7288d3f0615f": "2026-10-10T14:37:26.334Z",
+    "86d0be9a8a3ee538": "2026-10-12T10:48:56.135Z"
   },
   "konusma": {
     "daf1516a5a8e680c": {
@@ -37,19 +38,40 @@
       "konu": "cikis",
       "gun": "2026-10-10",
       "sayi": 2
+    },
+    "233c6876110fb851": {
+      "zaman": "2026-10-12T10:48:56.135Z",
+      "konu": "nasil-kullanilir",
+      "gun": "2026-10-12",
+      "sayi": 1
     }
   },
   "sayac": {
     "cikis": 3,
     "hikaye-yaniti": 1,
     "diger": 1,
-    "selam": 1
+    "selam": 1,
+    "nasil-kullanilir": 1
   },
   "insan_bekleyen": 2,
-  "son_kontrol": "2026-10-12T10:34:37.296Z",
+  "son_kontrol": "2026-10-12T10:48:56.135Z",
   "gorunen": {
-    "konusma": 4,
-    "son_24_saat": 0
+    "konusma": 5,
+    "son_24_saat": 1
   },
-  "son_teshis": []
+  "son_teshis": [
+    {
+      "mesaj": 1,
+      "metinli": 1,
+      "kimden_var": 1,
+      "bizden": 0,
+      "yeni": 1,
+      "alanlar": [
+        "created_time",
+        "from",
+        "id",
+        "message"
+      ]
+    }
+  ]
 }
