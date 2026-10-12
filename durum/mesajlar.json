@@ -54,18 +54,18 @@
     "nasil-kullanilir": 1
   },
   "insan_bekleyen": 2,
-  "son_kontrol": "2026-10-12T10:48:56.135Z",
+  "son_kontrol": "2026-10-12T11:03:20.615Z",
   "gorunen": {
     "konusma": 5,
     "son_24_saat": 1
   },
   "son_teshis": [
     {
-      "mesaj": 1,
-      "metinli": 1,
-      "kimden_var": 1,
-      "bizden": 0,
-      "yeni": 1,
+      "mesaj": 2,
+      "metinli": 2,
+      "kimden_var": 2,
+      "bizden": 1,
+      "yeni": 0,
       "alanlar": [
         "created_time",
         "from",
