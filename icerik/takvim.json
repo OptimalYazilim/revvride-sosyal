@@ -679,6 +679,20 @@
       "alt": "Kask intercomunu telefona bağlamanın 3 adımı: eşleştirme modu, Bluetooth ayarları, sesi deneme."
     },
     {
+      "id": "18ekim-surus-haritasi",
+      "zaman": "2026-10-18T10:00:00+03:00",
+      "tur": "kaydirmali",
+      "baslik": "Sürüş haritası",
+      "gorseller": [
+        "gorseller/18ekim-surus-haritasi/1.jpg",
+        "gorseller/18ekim-surus-haritasi/2.jpg",
+        "gorseller/18ekim-surus-haritasi/3.jpg"
+      ],
+      "metin": "Sürüşe başla, ekran haritaya dönsün. 🗺️\n\nRevvRide'da sürerken gittiğin yol, takip ettiğin rota, yakındaki tehlikeler ve konvoydaki arkadaşların tek haritada. Gidiş yönün hep yukarıda; tehlike yaklaşınca yine kaskından duyarsın. Haritayı istemezsen tek dokunuşla sade görünüme geçersin.\n\nSürerken haritaya mı bakarsın, yalnızca hıza mı? Yorumlara yaz 👇\n\nYakında App Store ve Google Play'de.\n\n#RevvRide #motosiklet #motorcu #virajlıyollar #konvoy",
+      "alt": "Sürüş haritasının dört özelliği: gittiğin yolun izi, takip ettiğin rota, yakındaki tehlikeler ve konvoydakiler; son karede sade görünüm seçeneği.",
+      "kaynak": "taslak"
+    },
+    {
       "id": "hikaye-03-19ekim-soguk-lastik",
       "zaman": "2026-10-19T19:00:00+03:00",
       "tur": "hikaye",
