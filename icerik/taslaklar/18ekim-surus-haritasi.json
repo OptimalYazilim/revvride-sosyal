@@ -1,0 +1,22 @@
+{
+  "id": "18ekim-surus-haritasi",
+  "zaman": "2026-10-18T10:00:00+03:00",
+  "tur": "kaydirmali",
+  "baslik": "Sürüş haritası",
+  "metin": "Sürüşe başla, ekran haritaya dönsün. 🗺️\n\nRevvRide'da sürerken gittiğin yol, takip ettiğin rota, yakındaki tehlikeler ve konvoydaki arkadaşların tek haritada. Gidiş yönün hep yukarıda; tehlike yaklaşınca yine kaskından duyarsın. Haritayı istemezsen tek dokunuşla sade görünüme geçersin.\n\nSürerken haritaya mı bakarsın, yalnızca hıza mı? Yorumlara yaz 👇\n\nYakında App Store ve Google Play'de.\n\n#RevvRide #motosiklet #motorcu #virajlıyollar #konvoy",
+  "alt": "Sürüş haritasının dört özelliği: gittiğin yolun izi, takip ettiğin rota, yakındaki tehlikeler ve konvoydakiler; son karede sade görünüm seçeneği.",
+  "kareler": [
+    { "sablon": "kapak", "zemin": "koyu", "etiket": "YENİ · SÜRÜŞ HARİTASI", "baslik": "Haritada gör, kaskından duy.", "metin": "Sürüşe başlayınca ekran haritaya döner: gidiş yönün yukarıda, önündeki yol göz ucunda.", "ikon": "map" },
+    {
+      "sablon": "liste",
+      "numara_baslangic": 1,
+      "ogeler": [
+        { "ikon": "route", "baslik": "Gittiğin yol", "metin": "Sürüş boyunca izin haritada uzar; dönünce rotaya çevirip paylaşabilirsin." },
+        { "ikon": "flag", "baslik": "Takip ettiğin rota", "metin": "Rotayı sürüyorsan güzergâh haritada; sıradaki viraj ekranın üstünde yazar." },
+        { "ikon": "alert", "baslik": "Yakındaki tehlikeler", "metin": "Çukur, mıcır, kaza gibi bildirimler haritada; yaklaşınca kaskından duyarsın." },
+        { "ikon": "users", "baslik": "Konvoydakiler", "metin": "Konvoydaysan arkadaşların haritada; geride kalan olursa herkes duyar." }
+      ]
+    },
+    { "sablon": "kapanis", "zemin": "turuncu", "baslik": "Sade seven de unutulmadı.", "metin": "Haritayı istemezsen tek dokunuşla büyük hız ekranına geçersin; seçimin sonraki sürüşte de kalır.", "ikon": "gauge" }
+  ]
+}

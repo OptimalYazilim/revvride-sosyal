@@ -72,6 +72,14 @@ paylaşma sayısı yüksek çıkan türü daha sık, ilgi görmeyeni daha seyrek
   Sürüşünü kaydet, rotaya çevir (viraj sayısı ve kıvrımlılık kendiliğinden hesaplanır), istersen paylaş.
   Rota sürülürken keskin viraj ve firketeler önceden okunur ("Dikkat, 200 metre sonra sağa firkete").
   Bir yerde 5 dakika durunca mola yerini sorar: kafe, yemek, benzinlik, konaklama, manzara, dinlenme.
+- **Sürüş haritası (Ekim 2026'dan):** "Sürüşe başla" deyince ekran koyu haritaya döner.
+  - Sürücü yön okuyla ortada, gidiş yönü yukarıda; harita hızla birlikte uzaklaşıp yakınlaşır.
+  - Haritada gittiği yolun izi, takip ettiği rota, yakındaki tehlikeler ve konvoydakiler görünür.
+  - Hız, süre ve mesafe küçük bir kutuda durur.
+  - İsteyen "Sade" görünümle yalnızca büyük hızı görür.
+  - **Adım adım sesli yol tarifi (navigasyon) YOK.** Rota haritada görülür, virajlar kaskta duyulur.
+- **Giriş (Ekim 2026'dan):** Google ya da Apple hesabıyla tek dokunuş; telefon numarası ve SMS kodu istenmez.
+  SMS yalnızca SOS içindir.
 - **Sürüş tarzları:** Chopper & Cruiser, Sport & Naked, Touring, Adventure, Klasik, Scooter. Tarzına uygun
   rotalar ve sürücüler öne çıkar; bir rotanın hangi tarza uygun olduğunu o tarzdaki sürücülerin puanları belirler.
 - **Motor dostu mekânlar:** sürücülerin önerdiği kafe, lokanta, benzinlik ve konaklama yerleri; motorcuya
@@ -99,6 +107,8 @@ paylaşma sayısı yüksek çıkan türü daha sık, ilgi görmeyeni daha seyrek
 - Fiyat ya da "ücretsiz" deme (karar verilmedi).
 - Radar, polis, jandarma, denetim noktası anma (uygulamada olsa da sosyal medyada yasal risk).
 - Kaza algılama, düşme algılama, otomatik SOS, ekran kapalıyken çalışma vaat etme (yok).
+- Adım adım sesli yol tarifi, "navigasyon uygulaması", "Google Haritalar yerine" gibi ifadeler (yok).
+- "Telefon numaranla kayıt ol" ya da "SMS koduyla giriş" deme (giriş Google ve Apple ile).
 - "Hayat kurtarır", "%100 güvenli", "kazasız" gibi vaatler.
 - Gerçek bir kişiyi, kulübü, markayı, mekânı adıyla övme ya da etiketleme; telifli müzik, film, şarkı sözü.
 - Siyasi, dini tartışma; trajik bir olayı içerik malzemesi yapma.
@@ -164,6 +174,10 @@ Parantez içi sayı en fazla karakterdir. `ekran` ve `ikon` değerleri aşağıd
 61 km/s, çukur ikazı), `akis` (paylaşılan rotalar, tarz filtresi), `mekanlar` (motor dostu mekân listesi),
 `kulupler` (kulüp keşfet), `etkinlik` (kulüp etkinliği ve konvoy), `servisler` (servis listesi),
 `yardim-agi` (SOS yardım ağı), `kaskina-bagla` (intercom kurulum rehberi).
+
+`surus` sürüş ekranının **sade görünümüdür** (harita yok). Sürüş haritasını anlatan gönderide `surus`'u
+"haritalı ekran" diye sunma; `ikon: "map"` kullan. Haritalı görünümün gerçek ekran görüntüsü telefon
+derlemesinden çekilince `harita` adıyla buraya eklenecek.
 
 **Simgeler:** alert, route, users, shield, helmet, headphones, volume, mic, check, flag, pin, phone,
 motorcycle, leaf, thermometer, fog, moon, sun, layers, manhole, bluetooth, coffee, tag, umbrella, wrench,

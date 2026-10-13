@@ -56,7 +56,7 @@ export const KONULAR = [
   {
     ad: 'nasil-kullanilir',
     kelime: /nasil kullan|nasil calis|kullanabilir|ne ise yar|nedir|ne yapiyor|nasil bir uygulama|ozellik/,
-    cevap: 'RevvRide çok yakında App Store ve Google Play\'de! 🏍️ Çıkınca uygulamayı indirip telefon numaranla giriş yapman yeterli. Kask intercom\'unu telefona Bluetooth ile bağla, "Sürüşe başla"ya dokun: önündeki tehlikeleri kaskından duyarsın, sürüşün kaydedilir. Adım adım anlatım profilimizdeki "Nasıl?" öne çıkanında.',
+    cevap: 'RevvRide çok yakında App Store ve Google Play\'de! 🏍️ Çıkınca uygulamayı indirip Google ya da Apple hesabınla tek dokunuşla giriş yapman yeterli; telefon numarası ya da SMS kodu istenmez. Kask intercom\'unu telefona Bluetooth ile bağla, "Sürüşe başla"ya dokun: önündeki tehlikeleri kaskından duyarsın, sürüşün kaydedilir. Adım adım anlatım profilimizdeki "Nasıl?" öne çıkanında.',
   },
   {
     ad: 'platform',
@@ -81,7 +81,7 @@ export const KONULAR = [
   {
     ad: 'rota',
     kelime: /rota|viraj|yol oner|nereye gid|harita|navigasyon/,
-    cevap: 'RevvRide\'da sürücülerin paylaştığı virajlı rotaları viraj sayısı ve kıvrımlılığıyla bulabilir, kendi sürüşünü rotaya çevirip paylaşabilirsin. Rotayı sürerken keskin virajlar yaklaşınca kaskından haber alırsın. 🛣️',
+    cevap: 'RevvRide\'da sürücülerin paylaştığı virajlı rotaları viraj sayısı ve kıvrımlılığıyla bulabilir, kendi sürüşünü rotaya çevirip paylaşabilirsin. Sürüşte ekran haritaya döner: gittiğin yol, takip ettiğin rota ve yakındaki tehlikeler haritada görünür; keskin virajlar yaklaşınca kaskından haber alırsın. Adım adım sesli yol tarifi yok. 🛣️',
   },
   {
     ad: 'tehlike',
