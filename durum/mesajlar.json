@@ -61,24 +61,10 @@
     "nasil-kullanilir": 1
   },
   "insan_bekleyen": 2,
-  "son_kontrol": "2026-10-15T07:43:35.441Z",
+  "son_kontrol": "2026-10-15T07:57:54.178Z",
   "gorunen": {
     "konusma": 6,
-    "son_24_saat": 1
+    "son_24_saat": 0
   },
-  "son_teshis": [
-    {
-      "mesaj": 2,
-      "metinli": 2,
-      "kimden_var": 2,
-      "bizden": 1,
-      "yeni": 0,
-      "alanlar": [
-        "created_time",
-        "from",
-        "id",
-        "message"
-      ]
-    }
-  ]
+  "son_teshis": []
 }
