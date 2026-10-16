@@ -1,11 +1,24 @@
 {
-  "guncellendi": "2026-10-15T10:21:17.565Z",
+  "guncellendi": "2026-10-16T06:26:37.419Z",
   "hesap": {
     "kullanici": "revvrideapp",
-    "takipci": 229,
-    "gonderi_sayisi": 7
+    "takipci": 311,
+    "gonderi_sayisi": 8
   },
   "gonderiler": [
+    {
+      "takvim_id": "02-15ekim-hey-revvride",
+      "tarih": "2026-10-15T17:03:42+0000",
+      "tur": "IMAGE",
+      "ilk_satir": "Elin gidonda, sesin yeter. 🎙️",
+      "begeni": 0,
+      "yorum": 0,
+      "erisim": 8,
+      "kaydetme": 1,
+      "paylasim": 0,
+      "etkilesim": 1,
+      "baglanti": "https://www.instagram.com/p/Dehc2u2muva/"
+    },
     {
       "takvim_id": "01-13ekim-sonbahar-kurallari",
       "tarih": "2026-10-13T17:08:19+0000",
