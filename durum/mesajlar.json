@@ -10,12 +10,6 @@
     "c692c34d0bdac022": "2026-10-14T08:43:53.780Z"
   },
   "konusma": {
-    "daf1516a5a8e680c": {
-      "zaman": "2026-10-09T15:02:26.102Z",
-      "konu": "cikis",
-      "gun": "2026-10-09",
-      "sayi": 1
-    },
     "7ead381f29f155a3": {
       "zaman": "2026-10-09T15:20:57.900Z",
       "konu": "hikaye-yaniti",
@@ -61,7 +55,7 @@
     "nasil-kullanilir": 1
   },
   "insan_bekleyen": 2,
-  "son_kontrol": "2026-10-16T14:48:33.678Z",
+  "son_kontrol": "2026-10-16T15:02:59.973Z",
   "gorunen": {
     "konusma": 6,
     "son_24_saat": 0
